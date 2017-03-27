@@ -1,0 +1,835 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		12125A911E83BBEA00219A8E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 12125A931E83BBEA00219A8E /* InfoPlist.strings */; };
+		1212BFE31E83590C00BCD9E7 /* QLPreviewController+XP.m in Sources */ = {isa = PBXBuildFile; fileRef = 1212BFE21E83590C00BCD9E7 /* QLPreviewController+XP.m */; };
+		1214703C1E7FD05900FD5E51 /* XPSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1214703B1E7FD05900FD5E51 /* XPSettingViewController.m */; };
+		12147DB31E6F92B5009D5321 /* XPAlbumDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 12147DB21E6F92B5009D5321 /* XPAlbumDetailViewController.m */; };
+		121DEB3E1E79125200491C97 /* XPSQLiteManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 121DEB3D1E79125100491C97 /* XPSQLiteManager.m */; };
+		1224BB061E6E41E200CCCD73 /* UIColor+XP.m in Sources */ = {isa = PBXBuildFile; fileRef = 1224BB051E6E41E200CCCD73 /* UIColor+XP.m */; };
+		1224BB0B1E6E901700CCCD73 /* GHPopupEditView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1224BB0A1E6E901700CCCD73 /* GHPopupEditView.m */; };
+		1224BB141E6EB70900CCCD73 /* XPAlbumModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1224BB131E6EB70900CCCD73 /* XPAlbumModel.m */; };
+		1226BC1A1E84A4C60022C882 /* XPAlbumCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1226BC191E84A4C60022C882 /* XPAlbumCell.m */; };
+		1226BC301E8515D00022C882 /* AsyncSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 1226BC251E8515D00022C882 /* AsyncSocket.m */; };
+		1226BC311E8515D00022C882 /* xmftp_commands.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1226BC261E8515D00022C882 /* xmftp_commands.plist */; };
+		1226BC321E8515D00022C882 /* XMFTPConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 1226BC281E8515D00022C882 /* XMFTPConnection.m */; };
+		1226BC331E8515D00022C882 /* XMFTPDataConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 1226BC2A1E8515D00022C882 /* XMFTPDataConnection.m */; };
+		1226BC341E8515D00022C882 /* XMFTPHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 1226BC2D1E8515D00022C882 /* XMFTPHelper.m */; };
+		1226BC351E8515D00022C882 /* XMFTPServer.m in Sources */ = {isa = PBXBuildFile; fileRef = 1226BC2F1E8515D00022C882 /* XMFTPServer.m */; };
+		1226BC381E8519830022C882 /* XPFTPViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1226BC371E8519830022C882 /* XPFTPViewController.m */; };
+		122E01251E7108F600CE8E4C /* XPPhotoPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 122E01241E7108F600CE8E4C /* XPPhotoPickerViewController.m */; };
+		122E012C1E712A4D00CE8E4C /* XPAlbumCollectionModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 122E012B1E712A4D00CE8E4C /* XPAlbumCollectionModel.m */; };
+		122E012F1E714A9700CE8E4C /* XPPhotoCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 122E012E1E714A9700CE8E4C /* XPPhotoCollectionViewController.m */; };
+		122E01331E714EF700CE8E4C /* XPPhotoCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 122E01321E714EF700CE8E4C /* XPPhotoCollectionViewCell.m */; };
+		122EE0481E67C15400FCAF98 /* functions.m in Sources */ = {isa = PBXBuildFile; fileRef = 122EE0471E67C15400FCAF98 /* functions.m */; };
+		122EE04C1E67C40800FCAF98 /* XPNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 122EE04B1E67C40800FCAF98 /* XPNavigationController.m */; };
+		122EE0501E67F2E800FCAF98 /* UIViewController+XP.m in Sources */ = {isa = PBXBuildFile; fileRef = 122EE04F1E67F2E800FCAF98 /* UIViewController+XP.m */; };
+		122EE0531E67F46A00FCAF98 /* UIView+XP.m in Sources */ = {isa = PBXBuildFile; fileRef = 122EE0521E67F46A00FCAF98 /* UIView+XP.m */; };
+		122EE0561E67F51700FCAF98 /* UIImage+XP.m in Sources */ = {isa = PBXBuildFile; fileRef = 122EE0551E67F51700FCAF98 /* UIImage+XP.m */; };
+		123F8E281E6947DD005379D2 /* XPSetPasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 123F8E271E6947DD005379D2 /* XPSetPasswordViewController.m */; };
+		123F8E2B1E694D4F005379D2 /* NSString+XP.m in Sources */ = {isa = PBXBuildFile; fileRef = 123F8E2A1E694D4F005379D2 /* NSString+XP.m */; };
+		124529201E80BF6E007222C4 /* XPSettingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1245291F1E80BF6E007222C4 /* XPSettingCell.m */; };
+		124529231E80CBDB007222C4 /* XPChangePasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 124529221E80CBDB007222C4 /* XPChangePasswordViewController.m */; };
+		12972AD01E6D08880092D64B /* LocalAuthentication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 12972ACF1E6D08880092D64B /* LocalAuthentication.framework */; };
+		129C3CDE1E6D14E600A52448 /* XPUnlockViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 129C3CDD1E6D14E600A52448 /* XPUnlockViewController.m */; };
+		129C3CE11E6D325100A52448 /* XPPasswordTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 129C3CE01E6D325100A52448 /* XPPasswordTool.m */; };
+		129C3CE41E6D4DFD00A52448 /* XPProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 129C3CE31E6D4DFD00A52448 /* XPProgressHUD.m */; };
+		12F4AECE1E7A2DD90034333E /* XPPhotoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 12F4AECD1E7A2DD90034333E /* XPPhotoModel.m */; };
+		12F4AED21E7A79230034333E /* XPAlbumDetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 12F4AED11E7A79230034333E /* XPAlbumDetailCell.m */; };
+		12FA26901E76A47D0000A643 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 12FA26921E76A47D0000A643 /* Localizable.strings */; };
+		4ACD21B9B3E2750FAF0C1AF6 /* libPods-PhotoSecurity.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CB161BA3F61719AAE63C0CFE /* libPods-PhotoSecurity.a */; };
+		548055CD1E6701750040143A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 548055CB1E6701750040143A /* Main.storyboard */; };
+		548055CF1E6701750040143A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 548055CE1E6701750040143A /* Assets.xcassets */; };
+		548055D21E6701750040143A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 548055D01E6701750040143A /* LaunchScreen.storyboard */; };
+		548055DE1E6702D70040143A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 548055DB1E6702D70040143A /* AppDelegate.m */; };
+		548055E01E6702D70040143A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 548055DD1E6702D70040143A /* main.m */; };
+		548055E91E6705F80040143A /* XPHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 548055E81E6705F80040143A /* XPHomeViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		12125A921E83BBEA00219A8E /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		12125A941E83BBEC00219A8E /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		1212BFE11E83590C00BCD9E7 /* QLPreviewController+XP.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "QLPreviewController+XP.h"; sourceTree = "<group>"; };
+		1212BFE21E83590C00BCD9E7 /* QLPreviewController+XP.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "QLPreviewController+XP.m"; sourceTree = "<group>"; };
+		1214703A1E7FD05900FD5E51 /* XPSettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XPSettingViewController.h; sourceTree = "<group>"; };
+		1214703B1E7FD05900FD5E51 /* XPSettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XPSettingViewController.m; sourceTree = "<group>"; };
+		12147DB11E6F92B5009D5321 /* XPAlbumDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XPAlbumDetailViewController.h; sourceTree = "<group>"; };
+		12147DB21E6F92B5009D5321 /* XPAlbumDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XPAlbumDetailViewController.m; sourceTree = "<group>"; };
+		121DEB3C1E79125100491C97 /* XPSQLiteManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XPSQLiteManager.h; sourceTree = "<group>"; };
+		121DEB3D1E79125100491C97 /* XPSQLiteManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XPSQLiteManager.m; sourceTree = "<group>"; };
+		1224BB041E6E41E200CCCD73 /* UIColor+XP.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+XP.h"; sourceTree = "<group>"; };
+		1224BB051E6E41E200CCCD73 /* UIColor+XP.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+XP.m"; sourceTree = "<group>"; };
+		1224BB091E6E901700CCCD73 /* GHPopupEditView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHPopupEditView.h; sourceTree = "<group>"; };
+		1224BB0A1E6E901700CCCD73 /* GHPopupEditView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHPopupEditView.m; sourceTree = "<group>"; };
+		1224BB121E6EB70900CCCD73 /* XPAlbumModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XPAlbumModel.h; sourceTree = "<group>"; };
+		1224BB131E6EB70900CCCD73 /* XPAlbumModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XPAlbumModel.m; sourceTree = "<group>"; };
+		1226BC181E84A4C60022C882 /* XPAlbumCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XPAlbumCell.h; sourceTree = "<group>"; };
+		1226BC191E84A4C60022C882 /* XPAlbumCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XPAlbumCell.m; sourceTree = "<group>"; };
+		1226BC241E8515D00022C882 /* AsyncSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AsyncSocket.h; sourceTree = "<group>"; };
+		1226BC251E8515D00022C882 /* AsyncSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AsyncSocket.m; sourceTree = "<group>"; };
+		1226BC261E8515D00022C882 /* xmftp_commands.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = xmftp_commands.plist; sourceTree = "<group>"; };
+		1226BC271E8515D00022C882 /* XMFTPConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMFTPConnection.h; sourceTree = "<group>"; };
+		1226BC281E8515D00022C882 /* XMFTPConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMFTPConnection.m; sourceTree = "<group>"; };
+		1226BC291E8515D00022C882 /* XMFTPDataConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMFTPDataConnection.h; sourceTree = "<group>"; };
+		1226BC2A1E8515D00022C882 /* XMFTPDataConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMFTPDataConnection.m; sourceTree = "<group>"; };
+		1226BC2B1E8515D00022C882 /* XMFTPDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMFTPDefines.h; sourceTree = "<group>"; };
+		1226BC2C1E8515D00022C882 /* XMFTPHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMFTPHelper.h; sourceTree = "<group>"; };
+		1226BC2D1E8515D00022C882 /* XMFTPHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMFTPHelper.m; sourceTree = "<group>"; };
+		1226BC2E1E8515D00022C882 /* XMFTPServer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMFTPServer.h; sourceTree = "<group>"; };
+		1226BC2F1E8515D00022C882 /* XMFTPServer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMFTPServer.m; sourceTree = "<group>"; };
+		1226BC361E8519830022C882 /* XPFTPViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XPFTPViewController.h; sourceTree = "<group>"; };
+		1226BC371E8519830022C882 /* XPFTPViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XPFTPViewController.m; sourceTree = "<group>"; };
+		1226BC3A1E8521200022C882 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
+		122E01231E7108F600CE8E4C /* XPPhotoPickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XPPhotoPickerViewController.h; sourceTree = "<group>"; };
+		122E01241E7108F600CE8E4C /* XPPhotoPickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XPPhotoPickerViewController.m; sourceTree = "<group>"; };
+		122E012A1E712A4D00CE8E4C /* XPAlbumCollectionModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XPAlbumCollectionModel.h; sourceTree = "<group>"; };
+		122E012B1E712A4D00CE8E4C /* XPAlbumCollectionModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XPAlbumCollectionModel.m; sourceTree = "<group>"; };
+		122E012D1E714A9700CE8E4C /* XPPhotoCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XPPhotoCollectionViewController.h; sourceTree = "<group>"; };
+		122E012E1E714A9700CE8E4C /* XPPhotoCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XPPhotoCollectionViewController.m; sourceTree = "<group>"; };
+		122E01311E714EF700CE8E4C /* XPPhotoCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XPPhotoCollectionViewCell.h; sourceTree = "<group>"; };
+		122E01321E714EF700CE8E4C /* XPPhotoCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XPPhotoCollectionViewCell.m; sourceTree = "<group>"; };
+		122EE0461E67C15400FCAF98 /* functions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = functions.h; sourceTree = "<group>"; };
+		122EE0471E67C15400FCAF98 /* functions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = functions.m; sourceTree = "<group>"; };
+		122EE0491E67C2CE00FCAF98 /* PhotoSecurity-prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PhotoSecurity-prefix.pch"; sourceTree = "<group>"; };
+		122EE04A1E67C40800FCAF98 /* XPNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XPNavigationController.h; sourceTree = "<group>"; };
+		122EE04B1E67C40800FCAF98 /* XPNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XPNavigationController.m; sourceTree = "<group>"; };
+		122EE04E1E67F2E800FCAF98 /* UIViewController+XP.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+XP.h"; sourceTree = "<group>"; };
+		122EE04F1E67F2E800FCAF98 /* UIViewController+XP.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+XP.m"; sourceTree = "<group>"; };
+		122EE0511E67F46A00FCAF98 /* UIView+XP.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+XP.h"; sourceTree = "<group>"; };
+		122EE0521E67F46A00FCAF98 /* UIView+XP.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+XP.m"; sourceTree = "<group>"; };
+		122EE0541E67F51700FCAF98 /* UIImage+XP.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+XP.h"; sourceTree = "<group>"; };
+		122EE0551E67F51700FCAF98 /* UIImage+XP.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+XP.m"; sourceTree = "<group>"; };
+		123F8E261E6947DD005379D2 /* XPSetPasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XPSetPasswordViewController.h; sourceTree = "<group>"; };
+		123F8E271E6947DD005379D2 /* XPSetPasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XPSetPasswordViewController.m; sourceTree = "<group>"; };
+		123F8E291E694D4F005379D2 /* NSString+XP.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+XP.h"; sourceTree = "<group>"; };
+		123F8E2A1E694D4F005379D2 /* NSString+XP.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+XP.m"; sourceTree = "<group>"; };
+		1245291E1E80BF6E007222C4 /* XPSettingCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XPSettingCell.h; sourceTree = "<group>"; };
+		1245291F1E80BF6E007222C4 /* XPSettingCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XPSettingCell.m; sourceTree = "<group>"; };
+		124529211E80CBDB007222C4 /* XPChangePasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XPChangePasswordViewController.h; sourceTree = "<group>"; };
+		124529221E80CBDB007222C4 /* XPChangePasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XPChangePasswordViewController.m; sourceTree = "<group>"; };
+		12972ACF1E6D08880092D64B /* LocalAuthentication.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LocalAuthentication.framework; path = System/Library/Frameworks/LocalAuthentication.framework; sourceTree = SDKROOT; };
+		129C3CDC1E6D14E600A52448 /* XPUnlockViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XPUnlockViewController.h; sourceTree = "<group>"; };
+		129C3CDD1E6D14E600A52448 /* XPUnlockViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XPUnlockViewController.m; sourceTree = "<group>"; };
+		129C3CDF1E6D325100A52448 /* XPPasswordTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XPPasswordTool.h; sourceTree = "<group>"; };
+		129C3CE01E6D325100A52448 /* XPPasswordTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XPPasswordTool.m; sourceTree = "<group>"; };
+		129C3CE21E6D4DFD00A52448 /* XPProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XPProgressHUD.h; sourceTree = "<group>"; };
+		129C3CE31E6D4DFD00A52448 /* XPProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XPProgressHUD.m; sourceTree = "<group>"; };
+		12F4AECC1E7A2DD90034333E /* XPPhotoModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XPPhotoModel.h; sourceTree = "<group>"; };
+		12F4AECD1E7A2DD90034333E /* XPPhotoModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XPPhotoModel.m; sourceTree = "<group>"; };
+		12F4AED01E7A79230034333E /* XPAlbumDetailCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XPAlbumDetailCell.h; sourceTree = "<group>"; };
+		12F4AED11E7A79230034333E /* XPAlbumDetailCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XPAlbumDetailCell.m; sourceTree = "<group>"; };
+		12FA268D1E76A1290000A643 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		12FA26911E76A47D0000A643 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
+		12FA26931E76A4800000A643 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		2087EFE77D97F50083653865 /* Pods-PhotoSecurity.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhotoSecurity.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PhotoSecurity/Pods-PhotoSecurity.debug.xcconfig"; sourceTree = "<group>"; };
+		548055BF1E6701750040143A /* PhotoSecurity.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhotoSecurity.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		548055CC1E6701750040143A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		548055CE1E6701750040143A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		548055D11E6701750040143A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		548055DA1E6702D70040143A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		548055DB1E6702D70040143A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		548055DC1E6702D70040143A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		548055DD1E6702D70040143A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		548055E71E6705F80040143A /* XPHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XPHomeViewController.h; sourceTree = "<group>"; };
+		548055E81E6705F80040143A /* XPHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XPHomeViewController.m; sourceTree = "<group>"; };
+		822EE1E3D6B604F264943CC6 /* Pods-PhotoSecurity.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhotoSecurity.release.xcconfig"; path = "Pods/Target Support Files/Pods-PhotoSecurity/Pods-PhotoSecurity.release.xcconfig"; sourceTree = "<group>"; };
+		CB161BA3F61719AAE63C0CFE /* libPods-PhotoSecurity.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PhotoSecurity.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		548055BC1E6701750040143A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				12972AD01E6D08880092D64B /* LocalAuthentication.framework in Frameworks */,
+				4ACD21B9B3E2750FAF0C1AF6 /* libPods-PhotoSecurity.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		121470381E7FD04300FD5E51 /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+				121470391E7FD04300FD5E51 /* Controller */,
+				1245291D1E80BF59007222C4 /* View */,
+			);
+			path = Setting;
+			sourceTree = "<group>";
+		};
+		121470391E7FD04300FD5E51 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				1214703A1E7FD05900FD5E51 /* XPSettingViewController.h */,
+				1214703B1E7FD05900FD5E51 /* XPSettingViewController.m */,
+				124529211E80CBDB007222C4 /* XPChangePasswordViewController.h */,
+				124529221E80CBDB007222C4 /* XPChangePasswordViewController.m */,
+				1226BC361E8519830022C882 /* XPFTPViewController.h */,
+				1226BC371E8519830022C882 /* XPFTPViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		12147DAF1E6F929D009D5321 /* AlbumDetail */ = {
+			isa = PBXGroup;
+			children = (
+				12147DB01E6F929D009D5321 /* Controller */,
+				12F4AECB1E7A2DC90034333E /* Model */,
+				12F4AECF1E7A790C0034333E /* View */,
+			);
+			path = AlbumDetail;
+			sourceTree = "<group>";
+		};
+		12147DB01E6F929D009D5321 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				12147DB11E6F92B5009D5321 /* XPAlbumDetailViewController.h */,
+				12147DB21E6F92B5009D5321 /* XPAlbumDetailViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		1224BB071E6E8FD000CCCD73 /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				1224BB081E6E8FE800CCCD73 /* GHPopupEditView */,
+				1226BC221E8515D00022C882 /* XMFTPServer */,
+			);
+			path = Library;
+			sourceTree = "<group>";
+		};
+		1224BB081E6E8FE800CCCD73 /* GHPopupEditView */ = {
+			isa = PBXGroup;
+			children = (
+				1224BB091E6E901700CCCD73 /* GHPopupEditView.h */,
+				1224BB0A1E6E901700CCCD73 /* GHPopupEditView.m */,
+			);
+			path = GHPopupEditView;
+			sourceTree = "<group>";
+		};
+		1224BB111E6EB6F700CCCD73 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1224BB121E6EB70900CCCD73 /* XPAlbumModel.h */,
+				1224BB131E6EB70900CCCD73 /* XPAlbumModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		1226BC171E84A4AD0022C882 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1226BC181E84A4C60022C882 /* XPAlbumCell.h */,
+				1226BC191E84A4C60022C882 /* XPAlbumCell.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		1226BC221E8515D00022C882 /* XMFTPServer */ = {
+			isa = PBXGroup;
+			children = (
+				1226BC231E8515D00022C882 /* CocoaAsyncSocket */,
+				1226BC261E8515D00022C882 /* xmftp_commands.plist */,
+				1226BC271E8515D00022C882 /* XMFTPConnection.h */,
+				1226BC281E8515D00022C882 /* XMFTPConnection.m */,
+				1226BC291E8515D00022C882 /* XMFTPDataConnection.h */,
+				1226BC2A1E8515D00022C882 /* XMFTPDataConnection.m */,
+				1226BC2B1E8515D00022C882 /* XMFTPDefines.h */,
+				1226BC2C1E8515D00022C882 /* XMFTPHelper.h */,
+				1226BC2D1E8515D00022C882 /* XMFTPHelper.m */,
+				1226BC2E1E8515D00022C882 /* XMFTPServer.h */,
+				1226BC2F1E8515D00022C882 /* XMFTPServer.m */,
+			);
+			path = XMFTPServer;
+			sourceTree = "<group>";
+		};
+		1226BC231E8515D00022C882 /* CocoaAsyncSocket */ = {
+			isa = PBXGroup;
+			children = (
+				1226BC241E8515D00022C882 /* AsyncSocket.h */,
+				1226BC251E8515D00022C882 /* AsyncSocket.m */,
+			);
+			path = CocoaAsyncSocket;
+			sourceTree = "<group>";
+		};
+		122E01211E71089900CE8E4C /* Photos */ = {
+			isa = PBXGroup;
+			children = (
+				122E01221E71089900CE8E4C /* Controller */,
+				122E01261E710A9F00CE8E4C /* Model */,
+				122E01301E714EC500CE8E4C /* View */,
+			);
+			path = Photos;
+			sourceTree = "<group>";
+		};
+		122E01221E71089900CE8E4C /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				122E01231E7108F600CE8E4C /* XPPhotoPickerViewController.h */,
+				122E01241E7108F600CE8E4C /* XPPhotoPickerViewController.m */,
+				122E012D1E714A9700CE8E4C /* XPPhotoCollectionViewController.h */,
+				122E012E1E714A9700CE8E4C /* XPPhotoCollectionViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		122E01261E710A9F00CE8E4C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				122E012A1E712A4D00CE8E4C /* XPAlbumCollectionModel.h */,
+				122E012B1E712A4D00CE8E4C /* XPAlbumCollectionModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		122E01301E714EC500CE8E4C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				122E01311E714EF700CE8E4C /* XPPhotoCollectionViewCell.h */,
+				122E01321E714EF700CE8E4C /* XPPhotoCollectionViewCell.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		122EE0431E67C13800FCAF98 /* General */ = {
+			isa = PBXGroup;
+			children = (
+				122EE04D1E67F2D100FCAF98 /* Category */,
+				122EE0441E67C13800FCAF98 /* Controller */,
+				1224BB071E6E8FD000CCCD73 /* Library */,
+				122EE0451E67C13800FCAF98 /* Utils */,
+			);
+			path = General;
+			sourceTree = "<group>";
+		};
+		122EE0441E67C13800FCAF98 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				122EE04A1E67C40800FCAF98 /* XPNavigationController.h */,
+				122EE04B1E67C40800FCAF98 /* XPNavigationController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		122EE0451E67C13800FCAF98 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				122EE0461E67C15400FCAF98 /* functions.h */,
+				122EE0471E67C15400FCAF98 /* functions.m */,
+				129C3CDF1E6D325100A52448 /* XPPasswordTool.h */,
+				129C3CE01E6D325100A52448 /* XPPasswordTool.m */,
+				129C3CE21E6D4DFD00A52448 /* XPProgressHUD.h */,
+				129C3CE31E6D4DFD00A52448 /* XPProgressHUD.m */,
+				121DEB3C1E79125100491C97 /* XPSQLiteManager.h */,
+				121DEB3D1E79125100491C97 /* XPSQLiteManager.m */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		122EE04D1E67F2D100FCAF98 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				122EE0541E67F51700FCAF98 /* UIImage+XP.h */,
+				122EE0551E67F51700FCAF98 /* UIImage+XP.m */,
+				122EE0511E67F46A00FCAF98 /* UIView+XP.h */,
+				122EE0521E67F46A00FCAF98 /* UIView+XP.m */,
+				122EE04E1E67F2E800FCAF98 /* UIViewController+XP.h */,
+				122EE04F1E67F2E800FCAF98 /* UIViewController+XP.m */,
+				123F8E291E694D4F005379D2 /* NSString+XP.h */,
+				123F8E2A1E694D4F005379D2 /* NSString+XP.m */,
+				1224BB041E6E41E200CCCD73 /* UIColor+XP.h */,
+				1224BB051E6E41E200CCCD73 /* UIColor+XP.m */,
+				1212BFE11E83590C00BCD9E7 /* QLPreviewController+XP.h */,
+				1212BFE21E83590C00BCD9E7 /* QLPreviewController+XP.m */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		1245291D1E80BF59007222C4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1245291E1E80BF6E007222C4 /* XPSettingCell.h */,
+				1245291F1E80BF6E007222C4 /* XPSettingCell.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		12972ACE1E6D08880092D64B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				12972ACF1E6D08880092D64B /* LocalAuthentication.framework */,
+				CB161BA3F61719AAE63C0CFE /* libPods-PhotoSecurity.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		12F4AECB1E7A2DC90034333E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				12F4AECC1E7A2DD90034333E /* XPPhotoModel.h */,
+				12F4AECD1E7A2DD90034333E /* XPPhotoModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		12F4AECF1E7A790C0034333E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				12F4AED01E7A79230034333E /* XPAlbumDetailCell.h */,
+				12F4AED11E7A79230034333E /* XPAlbumDetailCell.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		548055B61E6701750040143A = {
+			isa = PBXGroup;
+			children = (
+				548055C11E6701750040143A /* PhotoSecurity */,
+				548055C01E6701750040143A /* Products */,
+				12972ACE1E6D08880092D64B /* Frameworks */,
+				BBAC00311D4E9236DDB3DD0B /* Pods */,
+			);
+			sourceTree = "<group>";
+		};
+		548055C01E6701750040143A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				548055BF1E6701750040143A /* PhotoSecurity.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		548055C11E6701750040143A /* PhotoSecurity */ = {
+			isa = PBXGroup;
+			children = (
+				548055CE1E6701750040143A /* Assets.xcassets */,
+				548055D01E6701750040143A /* LaunchScreen.storyboard */,
+				548055CB1E6701750040143A /* Main.storyboard */,
+				12147DAF1E6F929D009D5321 /* AlbumDetail */,
+				122EE0431E67C13800FCAF98 /* General */,
+				548055E31E6705BE0040143A /* Home */,
+				122E01211E71089900CE8E4C /* Photos */,
+				121470381E7FD04300FD5E51 /* Setting */,
+				548055C21E6701750040143A /* Supporting Files */,
+				548055D91E6702D70040143A /* System */,
+			);
+			path = PhotoSecurity;
+			sourceTree = "<group>";
+		};
+		548055C21E6701750040143A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		548055D91E6702D70040143A /* System */ = {
+			isa = PBXGroup;
+			children = (
+				548055DA1E6702D70040143A /* AppDelegate.h */,
+				548055DB1E6702D70040143A /* AppDelegate.m */,
+				548055DC1E6702D70040143A /* Info.plist */,
+				548055DD1E6702D70040143A /* main.m */,
+				122EE0491E67C2CE00FCAF98 /* PhotoSecurity-prefix.pch */,
+				12FA26921E76A47D0000A643 /* Localizable.strings */,
+				12125A931E83BBEA00219A8E /* InfoPlist.strings */,
+			);
+			path = System;
+			sourceTree = "<group>";
+		};
+		548055E31E6705BE0040143A /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				548055E41E6705BE0040143A /* Controller */,
+				1224BB111E6EB6F700CCCD73 /* Model */,
+				1226BC171E84A4AD0022C882 /* View */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		548055E41E6705BE0040143A /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				548055E71E6705F80040143A /* XPHomeViewController.h */,
+				548055E81E6705F80040143A /* XPHomeViewController.m */,
+				123F8E261E6947DD005379D2 /* XPSetPasswordViewController.h */,
+				123F8E271E6947DD005379D2 /* XPSetPasswordViewController.m */,
+				129C3CDC1E6D14E600A52448 /* XPUnlockViewController.h */,
+				129C3CDD1E6D14E600A52448 /* XPUnlockViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		BBAC00311D4E9236DDB3DD0B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2087EFE77D97F50083653865 /* Pods-PhotoSecurity.debug.xcconfig */,
+				822EE1E3D6B604F264943CC6 /* Pods-PhotoSecurity.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		548055BE1E6701750040143A /* PhotoSecurity */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 548055D61E6701750040143A /* Build configuration list for PBXNativeTarget "PhotoSecurity" */;
+			buildPhases = (
+				4C28B26C9CDBFEB6735A6C69 /* [CP] Check Pods Manifest.lock */,
+				548055BB1E6701750040143A /* Sources */,
+				548055BC1E6701750040143A /* Frameworks */,
+				548055BD1E6701750040143A /* Resources */,
+				B1A68BB7E5DF0AF56167F277 /* [CP] Embed Pods Frameworks */,
+				5F288F9FDF0A36345ACD08EC /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PhotoSecurity;
+			productName = PhotoSecurity;
+			productReference = 548055BF1E6701750040143A /* PhotoSecurity.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		548055B71E6701750040143A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = XP;
+				LastUpgradeCheck = 0810;
+				ORGANIZATIONNAME = xiaopin;
+				TargetAttributes = {
+					548055BE1E6701750040143A = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = CMYM93G8R6;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 548055BA1E6701750040143A /* Build configuration list for PBXProject "PhotoSecurity" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+				"zh-Hans",
+			);
+			mainGroup = 548055B61E6701750040143A;
+			productRefGroup = 548055C01E6701750040143A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				548055BE1E6701750040143A /* PhotoSecurity */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		548055BD1E6701750040143A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				548055D21E6701750040143A /* LaunchScreen.storyboard in Resources */,
+				12FA26901E76A47D0000A643 /* Localizable.strings in Resources */,
+				1226BC311E8515D00022C882 /* xmftp_commands.plist in Resources */,
+				548055CF1E6701750040143A /* Assets.xcassets in Resources */,
+				548055CD1E6701750040143A /* Main.storyboard in Resources */,
+				12125A911E83BBEA00219A8E /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4C28B26C9CDBFEB6735A6C69 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		5F288F9FDF0A36345ACD08EC /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PhotoSecurity/Pods-PhotoSecurity-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B1A68BB7E5DF0AF56167F277 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PhotoSecurity/Pods-PhotoSecurity-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		548055BB1E6701750040143A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				548055E01E6702D70040143A /* main.m in Sources */,
+				548055E91E6705F80040143A /* XPHomeViewController.m in Sources */,
+				124529201E80BF6E007222C4 /* XPSettingCell.m in Sources */,
+				12147DB31E6F92B5009D5321 /* XPAlbumDetailViewController.m in Sources */,
+				122EE0501E67F2E800FCAF98 /* UIViewController+XP.m in Sources */,
+				1224BB141E6EB70900CCCD73 /* XPAlbumModel.m in Sources */,
+				1226BC321E8515D00022C882 /* XMFTPConnection.m in Sources */,
+				122E012C1E712A4D00CE8E4C /* XPAlbumCollectionModel.m in Sources */,
+				122E01251E7108F600CE8E4C /* XPPhotoPickerViewController.m in Sources */,
+				1226BC331E8515D00022C882 /* XMFTPDataConnection.m in Sources */,
+				122EE0561E67F51700FCAF98 /* UIImage+XP.m in Sources */,
+				129C3CE11E6D325100A52448 /* XPPasswordTool.m in Sources */,
+				129C3CE41E6D4DFD00A52448 /* XPProgressHUD.m in Sources */,
+				129C3CDE1E6D14E600A52448 /* XPUnlockViewController.m in Sources */,
+				121DEB3E1E79125200491C97 /* XPSQLiteManager.m in Sources */,
+				1224BB0B1E6E901700CCCD73 /* GHPopupEditView.m in Sources */,
+				1226BC381E8519830022C882 /* XPFTPViewController.m in Sources */,
+				123F8E281E6947DD005379D2 /* XPSetPasswordViewController.m in Sources */,
+				124529231E80CBDB007222C4 /* XPChangePasswordViewController.m in Sources */,
+				1214703C1E7FD05900FD5E51 /* XPSettingViewController.m in Sources */,
+				1226BC341E8515D00022C882 /* XMFTPHelper.m in Sources */,
+				1212BFE31E83590C00BCD9E7 /* QLPreviewController+XP.m in Sources */,
+				548055DE1E6702D70040143A /* AppDelegate.m in Sources */,
+				122E01331E714EF700CE8E4C /* XPPhotoCollectionViewCell.m in Sources */,
+				122EE04C1E67C40800FCAF98 /* XPNavigationController.m in Sources */,
+				1226BC301E8515D00022C882 /* AsyncSocket.m in Sources */,
+				12F4AECE1E7A2DD90034333E /* XPPhotoModel.m in Sources */,
+				12F4AED21E7A79230034333E /* XPAlbumDetailCell.m in Sources */,
+				123F8E2B1E694D4F005379D2 /* NSString+XP.m in Sources */,
+				122EE0481E67C15400FCAF98 /* functions.m in Sources */,
+				122EE0531E67F46A00FCAF98 /* UIView+XP.m in Sources */,
+				1224BB061E6E41E200CCCD73 /* UIColor+XP.m in Sources */,
+				122E012F1E714A9700CE8E4C /* XPPhotoCollectionViewController.m in Sources */,
+				1226BC351E8515D00022C882 /* XMFTPServer.m in Sources */,
+				1226BC1A1E84A4C60022C882 /* XPAlbumCell.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		12125A931E83BBEA00219A8E /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				12125A921E83BBEA00219A8E /* Base */,
+				12125A941E83BBEC00219A8E /* zh-Hans */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		12FA26921E76A47D0000A643 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				12FA26911E76A47D0000A643 /* Base */,
+				12FA26931E76A4800000A643 /* zh-Hans */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		548055CB1E6701750040143A /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				548055CC1E6701750040143A /* Base */,
+				1226BC3A1E8521200022C882 /* zh-Hans */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		548055D01E6701750040143A /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				548055D11E6701750040143A /* Base */,
+				12FA268D1E76A1290000A643 /* zh-Hans */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		548055D41E6701750040143A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		548055D51E6701750040143A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		548055D71E6701750040143A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2087EFE77D97F50083653865 /* Pods-PhotoSecurity.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = CMYM93G8R6;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/PhotoSecurity/System/PhotoSecurity-prefix.pch";
+				INFOPLIST_FILE = PhotoSecurity/System/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.0daybug.PhotoSecurity;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		548055D81E6701750040143A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 822EE1E3D6B604F264943CC6 /* Pods-PhotoSecurity.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = CMYM93G8R6;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/PhotoSecurity/System/PhotoSecurity-prefix.pch";
+				INFOPLIST_FILE = PhotoSecurity/System/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.0daybug.PhotoSecurity;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		548055BA1E6701750040143A /* Build configuration list for PBXProject "PhotoSecurity" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				548055D41E6701750040143A /* Debug */,
+				548055D51E6701750040143A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		548055D61E6701750040143A /* Build configuration list for PBXNativeTarget "PhotoSecurity" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				548055D71E6701750040143A /* Debug */,
+				548055D81E6701750040143A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 548055B71E6701750040143A /* Project object */;
+}

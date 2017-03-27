@@ -1,0 +1,51 @@
+
+/* Class = "UITextField"; placeholder = "Please enter a new password"; ObjectID = "00K-Sd-YNY"; */
+"00K-Sd-YNY.placeholder" = "请输入新密码";
+
+/* Class = "UINavigationItem"; title = "All albums"; ObjectID = "2ki-Zi-qEU"; */
+"2ki-Zi-qEU.title" = "所有相册";
+
+/* Class = "UIButton"; normalTitle = "Setting"; ObjectID = "8Op-Z9-ApT"; */
+"8Op-Z9-ApT.normalTitle" = "设置";
+
+/* Class = "UITextField"; placeholder = "Please enter your password"; ObjectID = "9zB-2U-VPo"; */
+"9zB-2U-VPo.placeholder" = "请输入密码";
+
+/* Class = "UILabel"; text = "New Password"; ObjectID = "Bkq-TO-LOu"; */
+"Bkq-TO-LOu.text" = "新密码";
+
+/* Class = "UIButton"; normalTitle = "Unlock"; ObjectID = "C7Z-pU-v1d"; */
+"C7Z-pU-v1d.normalTitle" = "解锁";
+
+/* Class = "UITextField"; placeholder = "Please confirm your password"; ObjectID = "HCO-m2-FOD"; */
+"HCO-m2-FOD.placeholder" = "请确认密码";
+
+/* Class = "UIButton"; normalTitle = "Set Password"; ObjectID = "HX8-4n-VM5"; */
+"HX8-4n-VM5.normalTitle" = "Set Password";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "Jr6-uL-fh4"; */
+"Jr6-uL-fh4.text" = "Label";
+
+/* Class = "UIButton"; normalTitle = "Start FTP Service"; ObjectID = "N1e-Tv-dq3"; */
+"N1e-Tv-dq3.normalTitle" = "开启FTP服务";
+
+/* Class = "UIButton"; selectedTitle = "Stop FTP Service"; ObjectID = "N1e-Tv-dq3"; */
+"N1e-Tv-dq3.selectedTitle" = "关闭FTP服务";
+
+/* Class = "UITextField"; placeholder = "Please enter the old password"; ObjectID = "QzR-TV-Wa9"; */
+"QzR-TV-Wa9.placeholder" = "请输入旧密码";
+
+/* Class = "UILabel"; text = "Old Password"; ObjectID = "Rtp-mu-7ur"; */
+"Rtp-mu-7ur.text" = "旧密码";
+
+/* Class = "UITextField"; placeholder = "Please enter your password"; ObjectID = "hmx-il-Vov"; */
+"hmx-il-Vov.placeholder" = "请输入密码";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "nW4-SV-6PL"; */
+"nW4-SV-6PL.text" = "Label";
+
+/* Class = "UINavigationItem"; title = "Setting"; ObjectID = "slt-Hu-ynz"; */
+"slt-Hu-ynz.title" = "设置";
+
+/* Class = "UITextField"; placeholder = "Please confirm the new password"; ObjectID = "t4j-eR-t1g"; */
+"t4j-eR-t1g.placeholder" = "请确认新密码";

@@ -1,0 +1,59 @@
+/* 
+  Localizable.strings
+  PhotoSecurity
+
+  Created by nhope on 2017/3/13.
+  Copyright © 2017年 xiaopin. All rights reserved.
+*/
+
+"Cancel" = "取消";
+"OK" = "确定";
+"Done" = "完成";
+"Edit" = "编辑";
+"Close" = "关闭";
+"Copying the pictures..." = "正在保存图片...";
+"Whether to delete the selected image from the photo library?" = "是否从系统图库中删除选中的图片？";
+"Delete" = "删除";
+"Delete fail." = "删除失败";
+"Album is empty" = "空相册";
+"Please click the button below to add a picture." = "该相册并没有任何图片，请点击下面的按钮添加图片";
+"Add pictures" = "添加图片";
+"Photo Library" = "照片图库";
+"Take Photo or Video" = "拍照或者视频";
+"No albums" = "没有相册";
+"No albums, please create an album to facilitate the storage of photos." = "请先点击下面的按钮创建一个新相册以便于存储图片";
+"Create a new album" = "创建新相册";
+"Please enter the album name" = "请输入相册名称";
+"Album name" = "相册名称";
+"Album name can not be empty" = "相册名称不能为空";
+"You can only select up to 9 images." = "你最多只能选择9张图片";
+"No photo or video" = "无照片或视频";
+"Password is wrong, please try again." = "密码错误，请重新输入";
+"The password entered twice is inconsistent" = "两次输入的密码不一致";
+"Password length is at least 6 characters" = "密码长度不少于6位";
+"You can use the Touch ID to verify the fingerprint quickly to complete the unlock application" = "您可以使用Touch ID快速验证指纹以完成解锁应用";
+"Delete Album" = "删除相册";
+"Are you sure you want to delete the album? All the pictures under the album will be deleted." = "你确定要删除该相册吗？该相册下的所有图片将会被删除。";
+"The camera is not available" = "该设备没有摄像头";
+"Photo saved failed" = "图片保存失败";
+"Photo saved successfully" = "图片保存成功";
+"Not authorized to use the camera" = "未获得授权使用摄像头";
+"Please open in iPhone \"Settings - Privacy - Camera\"" = "请在iPhone的\"设置-隐私-相机\"中打开";
+"Please open in iPhone \"Settings - Privacy - Photos\"" = "请在iPhone的\"设置-隐私-照片\"中打开";
+"No authorization to access Photo Library" = "未授权访问图库";
+"Open settings" = "打开设置";
+"Unlock access to locked feature" = "解锁应用";
+"Fingerprints are unlocked" = "指纹解锁";
+"Change Password" = "修改密码";
+"After opening, you can use the Touch ID to verify the fingerprint quickly to complete the unlock application" = "开启后，可使用Touch ID验证指纹快速完成解锁应用";
+"Old password is incorrect" = "旧密码错误";
+"Password has been modified successfully" = "密码已成功修改";
+"Make sure you want to turn off Touch ID?" = "你确定要关闭指纹解锁吗？";
+"Please select the pictures you want to delete" = "请先选择要删除的图片";
+"Please select the pictures you want to save" = "请先选择要保存的图片";
+"Deleting pictures..." = "正在删除图片...";
+"Are you sure you want to delete the selected photos?" = "你确定要删除所选的照片吗？";
+"FTP Service" = "FTP服务";
+"After opening, you can quickly copy the photos through the FTP server" = "开启后，你可以通过FTP服务器快速地将图片拷贝出来";
+"FTP server failed to open, please confirm open WIFI and connect WIFI" = "FTP服务器启动失败，请确认已成功连接WIFI";
+

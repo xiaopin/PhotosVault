@@ -1,0 +1,23 @@
+PODS:
+  - DZNEmptyDataSet (1.8.1)
+  - FMDB (2.6.2):
+    - FMDB/standard (= 2.6.2)
+  - FMDB/standard (2.6.2)
+  - IQKeyboardManager (4.0.8)
+  - MBProgressHUD (1.0.0)
+
+DEPENDENCIES:
+  - DZNEmptyDataSet (~> 1.8.1)
+  - FMDB (~> 2.6.2)
+  - IQKeyboardManager (~> 4.0.8)
+  - MBProgressHUD (~> 1.0.0)
+
+SPEC CHECKSUMS:
+  DZNEmptyDataSet: 9525833b9e68ac21c30253e1d3d7076cc828eaa7
+  FMDB: 854a0341b4726e53276f2a8996f06f1b80f9259a
+  IQKeyboardManager: 1a8189fa153bf09044355ee0ad36826f6767e7f7
+  MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
+
+PODFILE CHECKSUM: ba059952cf818e2db33a1b55523a2e4e4df1476a
+
+COCOAPODS: 1.1.1

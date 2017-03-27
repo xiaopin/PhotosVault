@@ -1,0 +1,34 @@
+//
+//  PhotoSecurity-prefix.pch
+//  PhotoSecurity
+//
+//  Created by nhope on 2017/3/2.
+//  Copyright © 2017年 xiaopin. All rights reserved.
+//
+
+#ifndef PhotoSecurity_prefix_pch
+#define PhotoSecurity_prefix_pch
+
+/// 全局函数
+#import "functions.h"
+
+/// 分类
+#import "UIView+XP.h"
+#import "UIImage+XP.h"
+#import "NSString+XP.h"
+#import "UIColor+XP.h"
+
+#import "XPPasswordTool.h"
+#import "XPProgressHUD.h"
+#import "XPSQLiteManager.h"
+
+
+/////////////////
+////    宏   ////
+/////////////////
+
+/// 处理Block循环引用
+#define weakify(obj)    autoreleasepool{} __weak __typeof(obj) weak##obj = obj;
+#define strongify(obj)  autoreleasepool{} __strong __typeof(obj) obj = weak##obj;
+
+#endif /* PhotoSecurity_prefix_pch */
