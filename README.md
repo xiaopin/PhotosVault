@@ -4,6 +4,8 @@
 [![Platform](https://img.shields.io/badge/platform-iOS-blue.svg?style=flat)]()
 [![License](https://img.shields.io/badge/license-MIT-orange.svg?style=flat)]()
 
+> 并不反对你使用该项目代码并上架App Store，但是严禁换个App Icon后就上架的行为。
+
 一个管理私密相片的App
 
 ## Feature
