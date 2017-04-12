@@ -73,5 +73,36 @@
             </array>
         </dict>
     </dict>
+    <key>CFBundleIcons~ipad</key>
+    <dict>
+        <key>CFBundleAlternateIcons</key>
+        <dict>
+            <key>AppAlternateIconiPad</key>
+            <dict>
+                <key>CFBundleIconFiles</key>
+                <array>
+                    <string>AppAlternateIconiPad</string>
+                </array>
+                <key>UIPrerenderedIcon</key>
+                <false/>
+            </dict>
+            <key>AppAlternateIconiPad2</key>
+            <dict>
+                <key>CFBundleIconFiles</key>
+                <array>
+                    <string>AppAlternateIconiPad2</string>
+                </array>
+                <key>UIPrerenderedIcon</key>
+                <false/>
+            </dict>
+        </dict>
+        <key>CFBundlePrimaryIcon</key>
+        <dict>
+            <key>CFBundleIconFiles</key>
+            <array>
+                <string>AppIcon83.5x83.5</string>
+            </array>
+        </dict>
+    </dict>
 </dict>
 </plist>

@@ -119,14 +119,14 @@
     if (event.subtype == UIEventSubtypeMotionShake &&
         isOperatingSystemAtLeastVersion(10, 3, 0) &&
         [application supportsAlternateIcons]) {
-        int random = arc4random_uniform(3);
+        int random = arc4random_uniform(1000)%3;
         NSString *iconName = nil; // nil表示使用原来的图标
         switch (random) {
             case 1:
-                iconName = @"AppAlternateIcon";
+                iconName = iPad() ? @"AppAlternateIconiPad" : @"AppAlternateIcon";
                 break;
             case 2:
-                iconName = @"AppAlternateIcon2";
+                iconName = iPad() ? @"AppAlternateIconiPad2" : @"AppAlternateIcon2";
                 break;
             default:
                 break;
