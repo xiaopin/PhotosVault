@@ -21,6 +21,30 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.tableView.cellLayoutMarginsFollowReadableWidth = NO;
+    // iOS>=10.3 通过摇一摇功能切换App图标
+    UIApplication *application = [UIApplication sharedApplication];
+    if (isOperatingSystemAtLeastVersion(10, 3, 0) && [application supportsAlternateIcons]) {
+        [application setApplicationSupportsShakeToEdit:YES];
+        UILabel *label = [[UILabel alloc] init];
+        label.numberOfLines = 0;
+        label.lineBreakMode = NSLineBreakByCharWrapping;
+        label.text = [NSString stringWithFormat:@"\n\n\t%@\n", NSLocalizedString(@"We have now provided by shaking random replacement application icon function, shake the phone try it", nil)];
+        label.textColor = [UIColor colorWithR:226.0 g:69.0 b:75.0];
+        label.font = [UIFont systemFontOfSize:15.0];
+        [label sizeToFit];
+        self.tableView.tableFooterView = label;
+        // 要使用摇一摇功能,必须将当前控制器设置为第一响应者
+        [self becomeFirstResponder];
+    }
+}
+
+- (void)viewDidLayoutSubviews {
+    [super viewDidLayoutSubviews];
+    [self.tableView.tableFooterView sizeToFit];
+}
+
+- (void)dealloc {
+    [[UIApplication sharedApplication] setApplicationSupportsShakeToEdit:NO];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -81,6 +105,44 @@
         return NSLocalizedString(@"After opening, you can quickly copy the photos through the FTP server", nil);
     }
     return nil;
+}
+
+#pragma mark - Shake
+
+- (void)motionBegan:(UIEventSubtype)motion withEvent:(UIEvent *)event {
+    
+}
+
+- (void)motionEnded:(UIEventSubtype)motion withEvent:(UIEvent *)event {
+    // 摇一摇结束,随机更换一个新的App图标
+    UIApplication *application = [UIApplication sharedApplication];
+    if (event.subtype == UIEventSubtypeMotionShake &&
+        isOperatingSystemAtLeastVersion(10, 3, 0) &&
+        [application supportsAlternateIcons]) {
+        int random = arc4random_uniform(3);
+        NSString *iconName = nil; // nil表示使用原来的图标
+        switch (random) {
+            case 1:
+                iconName = @"AppAlternateIcon";
+                break;
+            case 2:
+                iconName = @"AppAlternateIcon2";
+                break;
+            default:
+                break;
+        }
+        NSString *alternateIconName = [application alternateIconName];
+        if ((nil==alternateIconName && nil==iconName) ||
+            (alternateIconName && [alternateIconName isEqualToString:iconName])) {
+            [XPProgressHUD showFailureHUD:NSLocalizedString(@"Random icons are identical to existing icons and need not be replaced", nil) toView:self.view];
+            return;
+        }
+        [application setAlternateIconName:iconName completionHandler:nil];
+    }
+}
+
+- (void)motionCancelled:(UIEventSubtype)motion withEvent:(UIEvent *)event {
+    
 }
 
 #pragma mark - Actions

@@ -58,6 +58,16 @@ UIKIT_EXTERN NSString* generateUniquelyIdentifier();
  */
 UIKIT_EXTERN BOOL isEnableTouchID();
 
+/**
+ 判断系统版本是否大于等于给定的版本
+ 
+ @param majorVersion 主版本号
+ @param minorVersion 次版本号
+ @param patchVersion 补丁版本号
+ @return BOOL
+ */
+UIKIT_EXTERN BOOL isOperatingSystemAtLeastVersion(NSInteger majorVersion, NSInteger minorVersion, NSInteger patchVersion);
+
 
 ///////////////////////////////
 ////        内联函数        ////

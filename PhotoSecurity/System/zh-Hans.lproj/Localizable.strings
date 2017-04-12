@@ -56,4 +56,6 @@
 "FTP Service" = "FTP服务";
 "After opening, you can quickly copy the photos through the FTP server" = "开启后，你可以通过FTP服务器快速地将图片拷贝出来";
 "FTP server failed to open, please confirm open WIFI and connect WIFI" = "FTP服务器启动失败，请确认已成功连接WIFI";
+"We have now provided by shaking random replacement application icon function, shake the phone try it" = "我们现在提供了通过摇一摇随机替换应用图标的功能，请摇一摇手机尝试一下吧！";
+"Random icons are identical to existing icons and need not be replaced" = "随机图标与现有图标相同，无需更换";
 

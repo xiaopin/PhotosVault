@@ -120,6 +120,21 @@ BOOL isEnableTouchID()
     return (isSupport && nil == error);
 }
 
+/**
+ 判断系统版本是否大于等于给定的版本
+ 
+ @param majorVersion 主版本号
+ @param minorVersion 次版本号
+ @param patchVersion 补丁版本号
+ @return BOOL
+ */
+BOOL isOperatingSystemAtLeastVersion(NSInteger majorVersion, NSInteger minorVersion, NSInteger patchVersion)
+{
+    NSOperatingSystemVersion version = {majorVersion, minorVersion, patchVersion};
+    NSProcessInfo *processInfo = [NSProcessInfo processInfo];
+    return [processInfo isOperatingSystemAtLeastVersion:version];
+}
+
 
 ///////////////////////////
 ////        常量        ////

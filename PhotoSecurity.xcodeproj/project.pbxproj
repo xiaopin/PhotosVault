@@ -11,6 +11,13 @@
 		1212BFE31E83590C00BCD9E7 /* QLPreviewController+XP.m in Sources */ = {isa = PBXBuildFile; fileRef = 1212BFE21E83590C00BCD9E7 /* QLPreviewController+XP.m */; };
 		1214703C1E7FD05900FD5E51 /* XPSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1214703B1E7FD05900FD5E51 /* XPSettingViewController.m */; };
 		12147DB31E6F92B5009D5321 /* XPAlbumDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 12147DB21E6F92B5009D5321 /* XPAlbumDetailViewController.m */; };
+		121C11811E9DCA1D008AB02D /* Image+Video.m in Sources */ = {isa = PBXBuildFile; fileRef = 121C11801E9DCA1D008AB02D /* Image+Video.m */; };
+		121C11871E9DCDFE008AB02D /* AppAlternateIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 121C11841E9DCDFE008AB02D /* AppAlternateIcon.png */; };
+		121C11881E9DCDFE008AB02D /* AppAlternateIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 121C11851E9DCDFE008AB02D /* AppAlternateIcon@2x.png */; };
+		121C11891E9DCDFE008AB02D /* AppAlternateIcon@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 121C11861E9DCDFE008AB02D /* AppAlternateIcon@3x.png */; };
+		121C11931E9DCFDA008AB02D /* AppAlternateIcon2.png in Resources */ = {isa = PBXBuildFile; fileRef = 121C11901E9DCFDA008AB02D /* AppAlternateIcon2.png */; };
+		121C11941E9DCFDA008AB02D /* AppAlternateIcon2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 121C11911E9DCFDA008AB02D /* AppAlternateIcon2@2x.png */; };
+		121C11951E9DCFDA008AB02D /* AppAlternateIcon2@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 121C11921E9DCFDA008AB02D /* AppAlternateIcon2@3x.png */; };
 		121DEB3E1E79125200491C97 /* XPSQLiteManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 121DEB3D1E79125100491C97 /* XPSQLiteManager.m */; };
 		1224BB061E6E41E200CCCD73 /* UIColor+XP.m in Sources */ = {isa = PBXBuildFile; fileRef = 1224BB051E6E41E200CCCD73 /* UIColor+XP.m */; };
 		1224BB0B1E6E901700CCCD73 /* GHPopupEditView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1224BB0A1E6E901700CCCD73 /* GHPopupEditView.m */; };
@@ -61,6 +68,14 @@
 		1214703B1E7FD05900FD5E51 /* XPSettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XPSettingViewController.m; sourceTree = "<group>"; };
 		12147DB11E6F92B5009D5321 /* XPAlbumDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XPAlbumDetailViewController.h; sourceTree = "<group>"; };
 		12147DB21E6F92B5009D5321 /* XPAlbumDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XPAlbumDetailViewController.m; sourceTree = "<group>"; };
+		121C117F1E9DCA1D008AB02D /* Image+Video.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Image+Video.h"; sourceTree = "<group>"; };
+		121C11801E9DCA1D008AB02D /* Image+Video.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Image+Video.m"; sourceTree = "<group>"; };
+		121C11841E9DCDFE008AB02D /* AppAlternateIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AppAlternateIcon.png; sourceTree = "<group>"; };
+		121C11851E9DCDFE008AB02D /* AppAlternateIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AppAlternateIcon@2x.png"; sourceTree = "<group>"; };
+		121C11861E9DCDFE008AB02D /* AppAlternateIcon@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AppAlternateIcon@3x.png"; sourceTree = "<group>"; };
+		121C11901E9DCFDA008AB02D /* AppAlternateIcon2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AppAlternateIcon2.png; sourceTree = "<group>"; };
+		121C11911E9DCFDA008AB02D /* AppAlternateIcon2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AppAlternateIcon2@2x.png"; sourceTree = "<group>"; };
+		121C11921E9DCFDA008AB02D /* AppAlternateIcon2@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AppAlternateIcon2@3x.png"; sourceTree = "<group>"; };
 		121DEB3C1E79125100491C97 /* XPSQLiteManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XPSQLiteManager.h; sourceTree = "<group>"; };
 		121DEB3D1E79125100491C97 /* XPSQLiteManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XPSQLiteManager.m; sourceTree = "<group>"; };
 		1224BB041E6E41E200CCCD73 /* UIColor+XP.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+XP.h"; sourceTree = "<group>"; };
@@ -194,6 +209,27 @@
 				12147DB21E6F92B5009D5321 /* XPAlbumDetailViewController.m */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		121C11821E9DCDB7008AB02D /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				121C11831E9DCDB7008AB02D /* AlternateIcon */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		121C11831E9DCDB7008AB02D /* AlternateIcon */ = {
+			isa = PBXGroup;
+			children = (
+				121C11841E9DCDFE008AB02D /* AppAlternateIcon.png */,
+				121C11851E9DCDFE008AB02D /* AppAlternateIcon@2x.png */,
+				121C11861E9DCDFE008AB02D /* AppAlternateIcon@3x.png */,
+				121C11901E9DCFDA008AB02D /* AppAlternateIcon2.png */,
+				121C11911E9DCFDA008AB02D /* AppAlternateIcon2@2x.png */,
+				121C11921E9DCFDA008AB02D /* AppAlternateIcon2@3x.png */,
+			);
+			path = AlternateIcon;
 			sourceTree = "<group>";
 		};
 		1224BB071E6E8FD000CCCD73 /* Library */ = {
@@ -336,6 +372,8 @@
 		122EE04D1E67F2D100FCAF98 /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				121C117F1E9DCA1D008AB02D /* Image+Video.h */,
+				121C11801E9DCA1D008AB02D /* Image+Video.m */,
 				122EE0541E67F51700FCAF98 /* UIImage+XP.h */,
 				122EE0551E67F51700FCAF98 /* UIImage+XP.m */,
 				122EE0511E67F46A00FCAF98 /* UIView+XP.h */,
@@ -419,6 +457,7 @@
 				121470381E7FD04300FD5E51 /* Setting */,
 				548055C21E6701750040143A /* Supporting Files */,
 				548055D91E6702D70040143A /* System */,
+				121C11821E9DCDB7008AB02D /* Resources */,
 			);
 			path = PhotoSecurity;
 			sourceTree = "<group>";
@@ -542,9 +581,15 @@
 			files = (
 				548055D21E6701750040143A /* LaunchScreen.storyboard in Resources */,
 				12FA26901E76A47D0000A643 /* Localizable.strings in Resources */,
+				121C11891E9DCDFE008AB02D /* AppAlternateIcon@3x.png in Resources */,
 				1226BC311E8515D00022C882 /* xmftp_commands.plist in Resources */,
+				121C11871E9DCDFE008AB02D /* AppAlternateIcon.png in Resources */,
 				548055CF1E6701750040143A /* Assets.xcassets in Resources */,
+				121C11951E9DCFDA008AB02D /* AppAlternateIcon2@3x.png in Resources */,
+				121C11941E9DCFDA008AB02D /* AppAlternateIcon2@2x.png in Resources */,
 				548055CD1E6701750040143A /* Main.storyboard in Resources */,
+				121C11881E9DCDFE008AB02D /* AppAlternateIcon@2x.png in Resources */,
+				121C11931E9DCFDA008AB02D /* AppAlternateIcon2.png in Resources */,
 				12125A911E83BBEA00219A8E /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -625,6 +670,7 @@
 				124529231E80CBDB007222C4 /* XPChangePasswordViewController.m in Sources */,
 				1214703C1E7FD05900FD5E51 /* XPSettingViewController.m in Sources */,
 				1226BC341E8515D00022C882 /* XMFTPHelper.m in Sources */,
+				121C11811E9DCA1D008AB02D /* Image+Video.m in Sources */,
 				1212BFE31E83590C00BCD9E7 /* QLPreviewController+XP.m in Sources */,
 				548055DE1E6702D70040143A /* AppDelegate.m in Sources */,
 				122E01331E714EF700CE8E4C /* XPPhotoCollectionViewCell.m in Sources */,
