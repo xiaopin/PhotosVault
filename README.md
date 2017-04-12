@@ -37,11 +37,11 @@
 
 ###### 2017/04/12
 
-- 针对iOS10.3的新API，在设置界面中提供通过摇一摇随机更换应用图标的功能。
+- 针对iOS10.3的新API，在设置界面中提供通过摇一摇随机更换应用图标的功能，支持iPhone/iPad
 ``` ObjC
 - (void)setAlternateIconName:(nullable NSString *)alternateIconName completionHandler:(nullable void (^)(NSError *_Nullable error))completionHandler NS_EXTENSION_UNAVAILABLE("Extensions may not have alternate icons") API_AVAILABLE(ios(10.3), tvos(10.2));
 ```
-- 添加`Image+Video.{h/m}`文件，可以从视频文件中获取第一帧作为预览图使用，支持iOS/macOS
+- 添加`Image+Snapshot.{h/m}`文件，可以从视频/GIF文件中获取第一帧作为预览图使用，支持iOS/macOS
 
 ## License
 
