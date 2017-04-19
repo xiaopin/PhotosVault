@@ -7,3 +7,6 @@
 */
 
 "CFBundleDisplayName" = "相册保险柜";
+"NSCameraUsageDescription" = "允许使用摄像头拍照/录制视频";
+"NSMicrophoneUsageDescription" = "允许在录制视频时使用麦克风录制声音";
+"NSPhotoLibraryUsageDescription" = "查看并选择系统相册图片";

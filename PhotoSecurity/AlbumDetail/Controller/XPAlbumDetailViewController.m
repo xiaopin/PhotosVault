@@ -16,6 +16,7 @@
 #import <DZNEmptyDataSet/UIScrollView+EmptyDataSet.h>
 #import <AVFoundation/AVFoundation.h>
 #import <QuickLook/QuickLook.h>
+#import <MobileCoreServices/MobileCoreServices.h>
 
 
 #define OPERATION_TOOLBAR_TAG                   999
@@ -234,16 +235,30 @@ static CGFloat const kCellBorderMargin = 1.0;
 
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<NSString *,id> *)info {
     [picker dismissViewControllerAnimated:YES completion:nil];
-    UIImage *image = info[UIImagePickerControllerOriginalImage];
-    NSData *data = UIImageJPEGRepresentation(image, 0.75);
-    NSString *filename = [NSString stringWithFormat:@"%@.JPG", generateUniquelyIdentifier()];
+    NSData *data = nil;
+    NSString *filename = nil;
+    UIImage *previewImage = nil;
+    XPFileType filetype = XPFileTypeImage;
+    NSString *mediaType = info[UIImagePickerControllerMediaType];
+    CGSize size = CGSizeMake(XPThumbImageWidthAndHeightKey, XPThumbImageWidthAndHeightKey);
+    if ([mediaType isEqualToString:(NSString*)kUTTypeMovie]) { // 视频
+        NSURL *mediaURL = info[UIImagePickerControllerMediaURL];
+        data = [NSData dataWithContentsOfURL:mediaURL];
+        filename = [NSString stringWithFormat:@"%@.%@", generateUniquelyIdentifier(),mediaURL.pathExtension];
+        previewImage = [UIImage snapshotImageWithVideoURL:mediaURL];
+        previewImage = [UIImage thumbnailImageFromSourceImage:previewImage destinationSize:size];
+        filetype = XPFileTypeVideo;
+    } else { // 拍照
+        UIImage *image = info[UIImagePickerControllerOriginalImage];
+        data = UIImageJPEGRepresentation(image, 0.75);
+        filename = [NSString stringWithFormat:@"%@.JPG", generateUniquelyIdentifier()];
+        previewImage = [UIImage thumbnailImageFromSourceImageData:data destinationSize:size];
+    }
     NSString *path = [NSString stringWithFormat:@"%@/%@/%@", photoRootDirectory(),self.album.directory,filename];
     BOOL isSuccess = [data writeToFile:path atomically:YES];
     if (isSuccess) {
-        // 生成缩略图并保存
         NSString *thumbPath = [NSString stringWithFormat:@"%@/%@/%@/%@", photoRootDirectory(),self.album.directory,XPThumbDirectoryNameKey,filename];
-        UIImage *thumbImage = [UIImage thumbnailImageFromSourceImageData:data destinationSize:CGSizeMake(XPThumbImageWidthAndHeightKey, XPThumbImageWidthAndHeightKey)];
-        NSData *thumbData = UIImageJPEGRepresentation(thumbImage, 0.75);
+        NSData *thumbData = UIImageJPEGRepresentation(previewImage, 0.75);
         [thumbData writeToFile:thumbPath atomically:YES];
         
         // 保存图片记录到数据库
@@ -253,7 +268,7 @@ static CGFloat const kCellBorderMargin = 1.0;
         photo.originalname = @"";
         photo.createtime = photo.addtime = [[NSDate date] timeIntervalSince1970];
         photo.filesize = data.length;
-        photo.filetype = XPFileTypeImage; //拍照的肯定是图片
+        photo.filetype = filetype;
         [[XPSQLiteManager sharedSQLiteManager] addPhotos:@[photo]];
         self.album.count++;
         
@@ -347,6 +362,7 @@ static CGFloat const kCellBorderMargin = 1.0;
         
         UIImagePickerController *pickerVc = [[UIImagePickerController alloc] init];
         pickerVc.sourceType = UIImagePickerControllerSourceTypeCamera;
+        pickerVc.mediaTypes = @[(NSString*)kUTTypeImage, (NSString*)kUTTypeMovie];
         pickerVc.delegate = self;
         [self presentViewController:pickerVc animated:YES completion:nil];
     }]];

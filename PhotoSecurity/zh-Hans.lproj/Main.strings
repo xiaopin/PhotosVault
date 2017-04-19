@@ -21,7 +21,7 @@
 "HCO-m2-FOD.placeholder" = "请确认密码";
 
 /* Class = "UIButton"; normalTitle = "Set Password"; ObjectID = "HX8-4n-VM5"; */
-"HX8-4n-VM5.normalTitle" = "Set Password";
+"HX8-4n-VM5.normalTitle" = "设置密码";
 
 /* Class = "UILabel"; text = "Label"; ObjectID = "Jr6-uL-fh4"; */
 "Jr6-uL-fh4.text" = "Label";
@@ -42,7 +42,7 @@
 "hmx-il-Vov.placeholder" = "请输入密码";
 
 /* Class = "UILabel"; text = "Label"; ObjectID = "nW4-SV-6PL"; */
-"nW4-SV-6PL.text" = "Label";
+"nW4-SV-6PL.text" = "";
 
 /* Class = "UINavigationItem"; title = "Setting"; ObjectID = "slt-Hu-ynz"; */
 "slt-Hu-ynz.title" = "设置";
