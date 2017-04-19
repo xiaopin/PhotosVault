@@ -17,6 +17,7 @@
 #import "UIImage+XP.h"
 #import "NSString+XP.h"
 #import "UIColor+XP.h"
+#import "Image+Snapshot.h"
 
 #import "XPPasswordTool.h"
 #import "XPProgressHUD.h"

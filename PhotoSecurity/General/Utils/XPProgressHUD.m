@@ -71,12 +71,32 @@ static NSTimeInterval const kXPProgressHUDDismissDelayTimeInterval = 3.0;
 }
 
 /**
- *  隐藏HUD
+ *  隐藏HUD(该方法只会隐藏`第一个`添加到view中的HUD)
  *
  *  @param view 目标视图
  */
-+ (void)hideHUDForView:(UIView *)view {
-    [MBProgressHUD hideHUDForView:view animated:YES];
++ (BOOL)hideHUDForView:(UIView *)view {
+    return [MBProgressHUD hideHUDForView:view animated:YES];
+}
+
+/**
+ *  隐藏view中所有的HUD
+ *
+ *  @param view 目标视图
+ */
++ (void)hideAllHUDForView:(UIView *)view {
+    NSMutableArray<MBProgressHUD *> *huds = [NSMutableArray array];
+    NSEnumerator *subviewsEnum = [view.subviews reverseObjectEnumerator];
+    for (UIView *subview in subviewsEnum) {
+        if ([subview isKindOfClass:[MBProgressHUD class]]) {
+            [huds addObject:(MBProgressHUD *)subview];
+        }
+    }
+    
+    for (MBProgressHUD *hud in huds) {
+        hud.removeFromSuperViewOnHide = YES;
+        [hud hideAnimated:YES];
+    }
 }
 
 /**

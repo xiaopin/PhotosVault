@@ -49,12 +49,13 @@
     // 图片表
     "CREATE TABLE photos("
     "id INTEGER PRIMARY KEY AUTOINCREMENT,"
-    "albumid INTEGER NOT NULL," // 所属目录ID
-    "filename CHAR(50) NOT NULL," // 本地的图片名称
-    "originalname CHAR(50)," // 图片原始名称
-    "addtime INTEGER NOT NULL," // 添加时间
-    "createtime INTEGER NOT NULL," // 图片创建时间
-    "filesize INTEGER NOT NULL" // 图片内容大小
+    "albumid INTEGER NOT NULL DEFAULT 0," // 所属相册ID
+    "filename CHAR(50) NOT NULL DEFAULT \"\"," // 本地的图片/视频名称
+    "originalname CHAR(50) DEFAULT \"\"," // 原始名称
+    "addtime INTEGER NOT NULL DEFAULT 0," // 添加时间
+    "createtime INTEGER NOT NULL DEFAULT 0," // 图片创建时间
+    "filesize INTEGER NOT NULL DEFAULT 0," // 图片内容大小
+    "filetype TINYINT NOT NULL DEFAULT 0" // 文件类型, 0:普通图片 1:GIF图片 2:视频
     ");";
     
     [db executeStatements:sql];
@@ -170,11 +171,11 @@
     if (0 == photos.count) return NO;
     FMDatabase *db = [FMDatabase databaseWithPath:[self databaseFilePath]];
     if (![db open]) return NO;
-    NSMutableString *sql = [NSMutableString stringWithString:@"INSERT INTO photos(albumid,filename,originalname,addtime,createtime,filesize) VALUES"];
+    NSMutableString *sql = [NSMutableString stringWithString:@"INSERT INTO photos(albumid,filename,originalname,addtime,createtime,filesize,filetype) VALUES"];
     for (XPPhotoModel *photo in photos) {
-        [sql appendFormat:@"(%ld, \"%@\", \"%@\", %ld, %ld, %ld),",
+        [sql appendFormat:@"(%ld, \"%@\", \"%@\", %ld, %ld, %ld, %ld),",
                         photo.albumid, photo.filename, photo.originalname,
-                        photo.addtime, photo.createtime, photo.filesize];
+                        photo.addtime, photo.createtime, photo.filesize, photo.filetype];
     }
     BOOL success = [db executeUpdate:[sql substringToIndex:sql.length-1]];
     if (success) {
@@ -312,6 +313,7 @@
         photo.addtime = [set longForColumn:@"addtime"];
         photo.createtime = [set longForColumn:@"createtime"];
         photo.filesize = [set longForColumn:@"filesize"];
+        photo.filetype = [set intForColumn:@"filetype"];
         [photos addObject:photo];
     }
     return photos;

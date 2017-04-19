@@ -130,7 +130,11 @@ BOOL isEnableTouchID()
  */
 BOOL isOperatingSystemAtLeastVersion(NSInteger majorVersion, NSInteger minorVersion, NSInteger patchVersion)
 {
-    NSOperatingSystemVersion version = {majorVersion, minorVersion, patchVersion};
+    NSOperatingSystemVersion version = {
+                                        .majorVersion=majorVersion,
+                                        .minorVersion=minorVersion,
+                                        .patchVersion=patchVersion
+                                        };
     NSProcessInfo *processInfo = [NSProcessInfo processInfo];
     return [processInfo isOperatingSystemAtLeastVersion:version];
 }

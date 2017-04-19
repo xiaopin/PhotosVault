@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="WUP-9I-mE7">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="WUP-9I-mE7">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
         <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -119,11 +119,18 @@
                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hVU-hO-qpw">
                                             <rect key="frame" x="0.0" y="0.0" width="110" height="110"/>
                                         </imageView>
+                                        <imageView userInteractionEnabled="NO" contentMode="bottomRight" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="anE-Qb-3aj">
+                                            <rect key="frame" x="82" y="82" width="28" height="28"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="28" id="H59-AA-m5J"/>
+                                                <constraint firstAttribute="width" constant="28" id="pOR-oM-WKj"/>
+                                            </constraints>
+                                        </imageView>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="efg-bX-g92">
                                             <rect key="frame" x="0.0" y="0.0" width="110" height="110"/>
                                         </view>
                                         <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon-selected" translatesAutoresizingMaskIntoConstraints="NO" id="hqG-RS-PRb">
-                                            <rect key="frame" x="80" y="80" width="20" height="20"/>
+                                            <rect key="frame" x="45" y="45" width="20" height="20"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="20" id="BfA-ja-fbR"/>
                                                 <constraint firstAttribute="height" constant="20" id="Nv1-hr-KRz"/>
@@ -132,18 +139,21 @@
                                     </subviews>
                                 </view>
                                 <constraints>
+                                    <constraint firstItem="hqG-RS-PRb" firstAttribute="centerX" secondItem="7Ey-Qo-kHv" secondAttribute="centerX" id="1GP-Nv-e2p"/>
                                     <constraint firstAttribute="bottom" secondItem="hVU-hO-qpw" secondAttribute="bottom" id="54m-Nj-A9x"/>
+                                    <constraint firstAttribute="bottom" secondItem="anE-Qb-3aj" secondAttribute="bottom" id="AhM-Nj-yGs"/>
                                     <constraint firstItem="efg-bX-g92" firstAttribute="leading" secondItem="7Ey-Qo-kHv" secondAttribute="leading" id="Hvw-XH-hF6"/>
                                     <constraint firstAttribute="trailing" secondItem="efg-bX-g92" secondAttribute="trailing" id="IT2-wg-GtR"/>
                                     <constraint firstItem="hVU-hO-qpw" firstAttribute="top" secondItem="7Ey-Qo-kHv" secondAttribute="top" id="KCD-LP-BYe"/>
+                                    <constraint firstItem="hqG-RS-PRb" firstAttribute="centerY" secondItem="7Ey-Qo-kHv" secondAttribute="centerY" id="PaW-Zm-2ag"/>
                                     <constraint firstAttribute="trailing" secondItem="hVU-hO-qpw" secondAttribute="trailing" id="Ts5-PB-Sb6"/>
                                     <constraint firstItem="efg-bX-g92" firstAttribute="top" secondItem="7Ey-Qo-kHv" secondAttribute="top" id="Zf1-cW-hbC"/>
-                                    <constraint firstAttribute="trailing" secondItem="hqG-RS-PRb" secondAttribute="trailing" constant="10" id="ZqQ-vf-cXC"/>
-                                    <constraint firstAttribute="bottom" secondItem="hqG-RS-PRb" secondAttribute="bottom" constant="10" id="gxX-K2-Y1l"/>
+                                    <constraint firstAttribute="trailing" secondItem="anE-Qb-3aj" secondAttribute="trailing" id="e4m-mz-BPO"/>
                                     <constraint firstAttribute="bottom" secondItem="efg-bX-g92" secondAttribute="bottom" id="qJh-C4-O81"/>
                                     <constraint firstItem="hVU-hO-qpw" firstAttribute="leading" secondItem="7Ey-Qo-kHv" secondAttribute="leading" id="rYx-JH-1Io"/>
                                 </constraints>
                                 <connections>
+                                    <outlet property="filetypeImageView" destination="anE-Qb-3aj" id="Xuh-PE-A8s"/>
                                     <outlet property="imageView" destination="hVU-hO-qpw" id="hZP-0V-8oA"/>
                                     <outlet property="selectMaskView" destination="efg-bX-g92" id="dhB-tt-Twd"/>
                                     <outlet property="stateImageView" destination="hqG-RS-PRb" id="7oA-vM-XNV"/>

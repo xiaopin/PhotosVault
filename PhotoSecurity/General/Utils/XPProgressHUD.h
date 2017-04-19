@@ -48,11 +48,18 @@
 + (MBProgressHUD *)showLoadingHUD:(NSString *)message toView:(UIView *)view;
 
 /**
- *  隐藏HUD
+ *  隐藏HUD(该方法只会隐藏`第一个`添加到view中的HUD)
  *
  *  @param view 目标视图
  */
-+ (void)hideHUDForView:(UIView *)view;
++ (BOOL)hideHUDForView:(UIView *)view;
+
+/**
+ *  隐藏view中所有的HUD
+ *
+ *  @param view 目标视图
+ */
++ (void)hideAllHUDForView:(UIView *)view;
 
 /**
  *  显示一个自定义的HUD(不会自动消失)

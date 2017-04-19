@@ -8,6 +8,14 @@
 
 #import <Foundation/Foundation.h>
 
+
+typedef NS_ENUM(NSInteger, XPFileType) {
+    XPFileTypeImage         = 0, //普通图片
+    XPFileTypeGIFImage      = 1, //GIF图片
+    XPFileTypeVideo         = 2, //视频文件
+};
+
+
 @interface XPPhotoModel : NSObject
 
 /// 照片id
@@ -24,5 +32,7 @@
 @property (nonatomic, assign) NSInteger addtime;
 /// 图片大小
 @property (nonatomic, assign) NSUInteger filesize;
+/// 文件类型
+@property (nonatomic, assign) XPFileType filetype;
 
 @end

@@ -157,32 +157,72 @@ static CGFloat const kCellBorderMargin = 1.0;
     dispatch_queue_t queue = dispatch_queue_create("com.0daybug", DISPATCH_QUEUE_SERIAL); // 串行队列
     __block NSMutableArray<XPPhotoModel *> *photos = [NSMutableArray array];
     for (PHAsset *asset in assets) {
+        if (asset.mediaType == PHAssetMediaTypeUnknown || asset.mediaType == PHAssetMediaTypeAudio) continue;
         dispatch_group_enter(group);
         dispatch_group_async(group, queue, ^{
-            [[PHImageManager defaultManager] requestImageDataForAsset:asset options:nil resultHandler:^(NSData * _Nullable imageData, NSString * _Nullable dataUTI, UIImageOrientation orientation, NSDictionary * _Nullable info) {
-                @strongify(self);
-                if (nil == self || nil == imageData) return;
-                NSString *imageFileURL = info[@"PHImageFileURLKey"];
-                XPPhotoModel *photo = [[XPPhotoModel alloc] init];
-                photo.albumid = self.album.albumid;
-                photo.filename = [NSString stringWithFormat:@"%@.%@",generateUniquelyIdentifier(),imageFileURL.pathExtension];
-                photo.originalname = [imageFileURL lastPathComponent];
-                photo.createtime = [asset.creationDate timeIntervalSince1970];
-                photo.addtime = [[NSDate date] timeIntervalSince1970];
-                photo.filesize = imageData.length;
-                [photos addObject:photo];
-                // 将图片写入目标文件
-                NSString *path = [NSString stringWithFormat:@"%@/%@/%@", photoRootDirectory(),self.album.directory,photo.filename];
-                [imageData writeToFile:path atomically:YES];
-                
-                // 生成缩略图并保存
-                NSString *thumbPath = [NSString stringWithFormat:@"%@/%@/%@/%@", photoRootDirectory(),self.album.directory,XPThumbDirectoryNameKey,photo.filename];
-                UIImage *thumbImage = [UIImage thumbnailImageFromSourceImageData:imageData destinationSize:CGSizeMake(XPThumbImageWidthAndHeightKey, XPThumbImageWidthAndHeightKey)];
-                NSData *thumbData = UIImageJPEGRepresentation(thumbImage, 0.75);
-                [thumbData writeToFile:thumbPath atomically:YES];
-                
-                dispatch_group_leave(group);
-            }];
+            if (asset.mediaType == PHAssetMediaTypeVideo) { // 视频
+                [[PHImageManager defaultManager] requestAVAssetForVideo:asset options:nil resultHandler:^(AVAsset * _Nullable asset, AVAudioMix * _Nullable audioMix, NSDictionary * _Nullable info) {
+                    @strongify(self);
+                    if (![asset isKindOfClass:[AVURLAsset class]]) return;
+                    AVURLAsset *urlAsset = (AVURLAsset *)asset;
+                    // 视频文件
+                    NSString *suffix = [urlAsset.URL.absoluteString pathExtension];
+                    NSString *filename = [NSString stringWithFormat:@"%@.%@", generateUniquelyIdentifier(),suffix];
+                    NSData *videoData = [NSData dataWithContentsOfURL:urlAsset.URL];
+                    NSString *path = [NSString stringWithFormat:@"%@/%@/%@", photoRootDirectory(),self.album.directory,filename];
+                    [videoData writeToFile:path atomically:YES];
+                    // 视频预览图
+                    UIImage *thumbImage = [UIImage snapshotImageWithVideoURL:urlAsset.URL];
+                    thumbImage = [UIImage thumbnailImageFromSourceImage:thumbImage destinationSize:CGSizeMake(XPThumbImageWidthAndHeightKey, XPThumbImageWidthAndHeightKey)];
+                    NSString *thumbPath = [NSString stringWithFormat:@"%@/%@/%@/%@", photoRootDirectory(),self.album.directory,XPThumbDirectoryNameKey,filename];
+                    NSData *thumbData = UIImageJPEGRepresentation(thumbImage, 0.75);
+                    [thumbData writeToFile:thumbPath atomically:YES];
+                    // 保存视频信息
+                    XPPhotoModel *photo = [[XPPhotoModel alloc] init];
+                    photo.albumid = self.album.albumid;
+                    photo.filename = filename;
+                    photo.originalname = [urlAsset.URL.absoluteString lastPathComponent];
+                    // photo.createtime =
+                    photo.addtime = [[NSDate date] timeIntervalSince1970];
+                    photo.filesize = videoData.length;
+                    photo.filetype = XPFileTypeVideo;
+                    [photos addObject:photo];
+                    
+                    dispatch_group_leave(group);
+                }];
+            } else if (asset.mediaType == PHAssetMediaTypeImage) { // 图片
+                [[PHImageManager defaultManager] requestImageDataForAsset:asset options:nil resultHandler:^(NSData * _Nullable imageData, NSString * _Nullable dataUTI, UIImageOrientation orientation, NSDictionary * _Nullable info) {
+                    @strongify(self);
+                    NSURL *imageFileURL = info[@"PHImageFileURLKey"];
+                    XPPhotoModel *photo = [[XPPhotoModel alloc] init];
+                    photo.albumid = self.album.albumid;
+                    photo.filename = [NSString stringWithFormat:@"%@.%@",generateUniquelyIdentifier(),imageFileURL.pathExtension];
+                    photo.originalname = [imageFileURL lastPathComponent];
+                    photo.createtime = [asset.creationDate timeIntervalSince1970];
+                    photo.addtime = [[NSDate date] timeIntervalSince1970];
+                    photo.filesize = imageData.length;
+                    photo.filetype = [imageFileURL.pathExtension.uppercaseString isEqualToString:@"GIF"] ? XPFileTypeGIFImage : XPFileTypeImage;
+                    [photos addObject:photo];
+                    // 将图片写入目标文件
+                    NSString *path = [NSString stringWithFormat:@"%@/%@/%@", photoRootDirectory(),self.album.directory,photo.filename];
+                    [imageData writeToFile:path atomically:YES];
+                    
+                    // 生成缩略图并保存
+                    NSString *thumbPath = [NSString stringWithFormat:@"%@/%@/%@/%@", photoRootDirectory(),self.album.directory,XPThumbDirectoryNameKey,photo.filename];
+                    UIImage *thumbImage = nil;
+                    CGSize thumbImageSize = CGSizeMake(XPThumbImageWidthAndHeightKey, XPThumbImageWidthAndHeightKey);
+                    if (photo.filetype == XPFileTypeGIFImage) {
+                        UIImage *tmpImage = [UIImage snapshotImageWithGIFImageURL:imageFileURL];
+                        thumbImage = [UIImage thumbnailImageFromSourceImage:tmpImage destinationSize:thumbImageSize];
+                    } else {
+                        thumbImage = [UIImage thumbnailImageFromSourceImageData:imageData destinationSize:thumbImageSize];
+                    }
+                    NSData *thumbData = UIImageJPEGRepresentation(thumbImage, 0.75);
+                    [thumbData writeToFile:thumbPath atomically:YES];
+                    
+                    dispatch_group_leave(group);
+                }];
+            }
         });
     }
     dispatch_group_notify(group, queue, ^{
@@ -262,6 +302,7 @@ static CGFloat const kCellBorderMargin = 1.0;
         photo.originalname = @"";
         photo.createtime = photo.addtime = [[NSDate date] timeIntervalSince1970];
         photo.filesize = data.length;
+        photo.filetype = XPFileTypeImage; //拍照的肯定是图片
         [[XPSQLiteManager sharedSQLiteManager] addPhotos:@[photo]];
         self.album.count++;
         
@@ -473,6 +514,8 @@ static CGFloat const kCellBorderMargin = 1.0;
             dispatch_async(dispatch_get_main_queue(), ^{
                 [self.collectionView reloadData];
                 [XPProgressHUD hideHUDForView:[UIApplication sharedApplication].keyWindow];
+                [self.selectMaps removeAllObjects];
+                [self updateToolbarIndicator];
             });
         });
     }]];

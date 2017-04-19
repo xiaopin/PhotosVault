@@ -63,7 +63,6 @@
 #endif
     CGImageRelease(imageRef);
     return image;
-    return nil;
 }
 
 @end
